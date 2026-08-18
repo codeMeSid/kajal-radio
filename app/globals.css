@@ -33,14 +33,24 @@ body {
   text-rendering: optimizeLegibility;
 }
 
-/* 1 — the scene. Two separately composed files, not a crop of each other. */
-.hero-bg {
-  background-image: url("/bg/scene-wide.png");
+/* 1 — the scene. Per-person folder: public/bg/<slug>/. Two files, not a crop. */
+.hero-bg-kajal {
+  background-image: url("/bg/kajal/scene-wide.png");
 }
 
 @media (orientation: portrait) {
-  .hero-bg {
-    background-image: url("/bg/scene-tall.png");
+  .hero-bg-kajal {
+    background-image: url("/bg/kajal/scene-tall.png");
+  }
+}
+
+.hero-bg-shamili {
+  background-image: url("/bg/shamili/scene-wide.png");
+}
+
+@media (orientation: portrait) {
+  .hero-bg-shamili {
+    background-image: url("/bg/shamili/scene-tall.png");
   }
 }
 

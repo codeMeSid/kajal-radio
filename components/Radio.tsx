@@ -2,7 +2,7 @@
 
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { track as analytics } from "@vercel/analytics";
-import { PLAYLISTS, type Track } from "@/lib/tracks";
+import { STATIONS, type StationId, type Track } from "@/lib/tracks";
 
 /* ------------------------------------------------------------------ *
  * YouTube IFrame API
@@ -134,9 +134,23 @@ function Meta({
   track,
   compact,
 }: {
-  track: Track;
+  track: Track | undefined;
   compact: boolean;
 }) {
+  if (!track) {
+    return (
+      <div className="min-w-0 flex-1">
+        <p
+          className={`truncate font-semibold tracking-tight text-ink ${
+            compact ? "text-[15px]" : "text-[15px]"
+          }`}
+        >
+          No tracks yet
+        </p>
+        <p className="truncate text-[12.5px] text-white/70">add songs in lib/tracks.ts</p>
+      </div>
+    );
+  }
   const sub = [track.artist, track.film, track.year > 0 ? track.year : null]
     .filter(Boolean)
     .join(" · ");
@@ -285,39 +299,11 @@ function Transport({
   );
 }
 
-function PlaylistTabs({
-  activeIndex,
-  onSelect,
-}: {
-  activeIndex: number;
-  onSelect: (index: number) => void;
-}) {
-  return (
-    <div className="flex flex-wrap items-center justify-center gap-1.5">
-      {PLAYLISTS.map((p, i) => (
-        <button
-          key={p.id}
-          type="button"
-          onClick={() => onSelect(i)}
-          className={`rounded-full border px-3 py-1 text-[10.5px] uppercase tracking-[0.14em] transition ${
-            i === activeIndex
-              ? "border-accent/50 bg-accent/20 text-accent-soft"
-              : "border-white/10 bg-black/25 text-ink/55 hover:text-ink/85"
-          }`}
-        >
-          {p.name}
-        </button>
-      ))}
-    </div>
-  );
-}
-
 /* ------------------------------------------------------------------ *
  * Radio
  * ------------------------------------------------------------------ */
 
-export default function Radio() {
-  const [playlistIndex, setPlaylistIndex] = useState(0);
+export default function Radio({ station }: { station: StationId }) {
   const [trackIndex, setTrackIndex] = useState(0);
   const [playing, setPlaying] = useState(false);
   const [position, setPosition] = useState(0);
@@ -325,8 +311,7 @@ export default function Radio() {
   const [ready, setReady] = useState(false);
   const [expanded, setExpanded] = useState(false);
 
-  const playlist = PLAYLISTS[playlistIndex];
-  const tracks = playlist.tracks;
+  const tracks = STATIONS[station];
   const current = tracks[trackIndex];
   const playable = Boolean(current?.videoId);
 
@@ -342,6 +327,7 @@ export default function Radio() {
   currentRef.current = current;
 
   const goTo = (next: number) => {
+    if (tracks.length === 0) return;
     setTrackIndex(((next % tracks.length) + tracks.length) % tracks.length);
     setPosition(0);
     setDuration(0);
@@ -504,7 +490,7 @@ export default function Radio() {
       window.removeEventListener("resize", measure);
       window.removeEventListener("orientationchange", measure);
     };
-  }, [expanded, trackIndex, playlistIndex]);
+  }, [expanded, trackIndex]);
 
   useEffect(() => {
     if (!expanded) return;
@@ -528,14 +514,6 @@ export default function Radio() {
   const seek = (seconds: number) => {
     setPosition(seconds);
     playerRef.current?.seekTo(seconds, true);
-  };
-
-  const selectPlaylist = (index: number) => {
-    if (index === playlistIndex) return;
-    setPlaylistIndex(index);
-    setTrackIndex(0);
-    setPosition(0);
-    setDuration(0);
   };
 
   const shownDuration = duration || current?.duration || 0;
@@ -600,13 +578,15 @@ export default function Radio() {
       )}
 
       <div className="flex w-full max-w-xl flex-col items-center gap-3">
-        {/* <PlaylistTabs activeIndex={playlistIndex} onSelect={selectPlaylist} /> */}
-
-        {!playable && (
+        {tracks.length === 0 ? (
+          <p className="rounded-full border border-amber-300/25 bg-black/40 px-3 py-1 text-center text-[10.5px] uppercase tracking-[0.12em] text-amber-200/80 backdrop-blur-md">
+            no tracks yet — add them in lib/tracks.ts
+          </p>
+        ) : !playable ? (
           <p className="rounded-full border border-amber-300/25 bg-black/40 px-3 py-1 text-center text-[10.5px] uppercase tracking-[0.12em] text-amber-200/80 backdrop-blur-md">
             no videoId yet — add one in lib/tracks.ts
           </p>
-        )}
+        ) : null}
 
         {/* DESKTOP — one horizontal pill. */}
         <div className={`hidden w-full items-center gap-4 rounded-full p-3 pr-5 sm:flex ${GLASS}`}>
@@ -651,7 +631,7 @@ export default function Radio() {
               large
             />
             <div className="text-right text-[10.5px] tabular-nums text-white/40">
-              {trackIndex + 1}/{tracks.length}
+              {tracks.length === 0 ? "0/0" : `${trackIndex + 1}/${tracks.length}`}
             </div>
           </div>
         </div>

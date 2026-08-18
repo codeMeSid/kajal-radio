@@ -4,9 +4,11 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Kajal Radio · काजल रेडियो",
-  description:
-    "A one-street radio station. Thirty-six songs about kajal, playing out of a cassette shop in Jaisalmer, 1997.",
+  title: {
+    default: "Kajal",
+    template: "%s · Kajal",
+  },
+  description: "A house of small pages.",
 };
 
 export const viewport: Viewport = {

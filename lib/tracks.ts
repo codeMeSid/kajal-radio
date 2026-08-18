@@ -19,69 +19,54 @@ export type Track = {
   videoId: string;
 };
 
-export type Playlist = { id: string; name: string; tagline: string; tracks: Track[] };
+// Key = page slug. /kajal plays STATIONS.kajal only.
+// Add a person: new key + app/<slug>/page.tsx with <Radio station="slug" />.
+// Add a song: one line in that person's array.
+export const STATIONS = {
+  kajal: [
+    { id: "k1", title: "Kesariya", artist: "Arijit Singh", film: "Brahmastra", year: 2022, duration: 0, videoId: "BddP6PYo2gs" },
+    { id: "k2", title: "Kesariya Dance", artist: "Arijit Singh", film: "Brahmastra", year: 2022, duration: 0, videoId: "K3B8-klo5xc" },
+    { id: "k3", title: "Kashish", artist: "Kashish", film: "Brahmastra", year: 2022, duration: 0, videoId: "nwXAkF8OFCc" },
 
-// Adding a song = one line in the right array.
-export const PLAYLISTS: Playlist[] = [
-  {
-    id: "aankhon-mein-kajal",
-    name: "Aankhon Mein Kajal",
-    tagline: "C & G major · the golden ones",
-    tracks: [
-      { id: "a1", title: "Kesariya", artist: "Arijit Singh", film: "Brahmastra", year: 2022, duration: 0, videoId: "BddP6PYo2gs" },
-      { id: "a2", title: "Kesariya Dance", artist: "Arijit Singh", film: "Brahmastra", year: 2022, duration: 0, videoId: "K3B8-klo5xc" },
-      { id: "a2", title: "Kashish", artist: "Kashish", film: "Brahmastra", year: 2022, duration: 0, videoId: "nwXAkF8OFCc" },
-      
-      // { id: "a1", title: "Kajal Kajal Teri Aankhon Ka", artist: "Amit Kumar", film: "", year: 0, duration: 0, videoId: "" },
-      // { id: "a2", title: "Mera Kajal", artist: "Falguni Pathak", film: "", year: 0, duration: 0, videoId: "" },
-      // { id: "a3", title: "Kajal", artist: "Munawar", film: "", year: 0, duration: 0, videoId: "" },
-      // { id: "a4", title: "Aankhon Mein Kajal Hai", artist: "Lata Mangeshkar", film: "", year: 0, duration: 0, videoId: "" },
-      // { id: "a5", title: "Aankhon Ka Kajal", artist: "Udit Narayan", film: "", year: 0, duration: 0, videoId: "" },
-      // { id: "a6", title: "Sun O Hasina Kajal Wali", artist: "Jolly Mukherjee", film: "", year: 0, duration: 0, videoId: "" },
-      
-      // { id: "a8", title: "Mere Haath Mein", artist: "Sonu Nigam", film: "Fanaa", year: 2006, duration: 0, videoId: "" },
-      // { id: "a9", title: "Hum Tum", artist: "Alka Yagnik", film: "Hum Tum", year: 2004, duration: 0, videoId: "" },
-      // { id: "a10", title: "Choudhary (Naina Kajal Ke)", artist: "Ruchika Jangid", film: "", year: 0, duration: 0, videoId: "" },
-      // { id: "a11", title: "Kajal Wali (Title Track)", artist: "Neha Kakkar", film: "", year: 0, duration: 0, videoId: "" },
-      // { id: "a12", title: "Aankhon Mein Teri Kajal", artist: "A. K. Arya", film: "", year: 0, duration: 0, videoId: "" },
-    ],
-  },
-  {
-    id: "kajal-ki-siyahi",
-    name: "Kajal Ki Siyahi",
-    tagline: "D & A major · cassette-shop hours",
-    tracks: [
-      // { id: "b1", title: "Teri Aankhon Ka Kajal", artist: "Gulshan Kumar", film: "", year: 0, duration: 0, videoId: "" },
-      // { id: "b2", title: "Kajal Ki Siyahi Se", artist: "Pritam", film: "Brahmastra", year: 2022, duration: 0, videoId: "" },
-      // { id: "b3", title: "Nazar Na Lage (Kajal Lagake)", artist: "Shafqat Amanat Ali", film: "", year: 0, duration: 0, videoId: "" },
-      // { id: "b4", title: "Tu Hi Meri Kajal", artist: "Kumar Sanu", film: "", year: 0, duration: 0, videoId: "" },
-      // { id: "b5", title: "Kajal Re", artist: "Shailendra Singh", film: "Bobby", year: 1973, duration: 0, videoId: "" },
-      // { id: "b6", title: "Nakhon Mein Kajal", artist: "Hariharan", film: "", year: 0, duration: 0, videoId: "" },
-      // { id: "b7", title: "Kajal Na Dil Ma Rehjo", artist: "Kajal Maheriya", film: "", year: 0, duration: 0, videoId: "" },
-      // { id: "b8", title: "Mora Kajal", artist: "Kinjal Dave", film: "", year: 0, duration: 0, videoId: "" },
-      // { id: "b9", title: "Kajal Katariya (Title Track)", artist: "Kajal Katariya", film: "", year: 0, duration: 0, videoId: "" },
-      // { id: "b10", title: "Ankhiyaan Da Kajal", artist: "Rahat Fateh Ali Khan", film: "", year: 0, duration: 0, videoId: "" },
-      // { id: "b11", title: "Kajal Lagake (Reprise)", artist: "Neha Kakkar", film: "", year: 0, duration: 0, videoId: "" },
-      // { id: "b12", title: "Tor Naina Ma Kajal", artist: "Sunil Soni", film: "", year: 0, duration: 0, videoId: "" },
-    ],
-  },
-  {
-    id: "kajal-raat",
-    name: "Kajal Raat",
-    tagline: "E & B minor · after the shutters come down",
-    tracks: [
-      // { id: "c1", title: "Kajal Ankhiyaan", artist: "Pawan Singh", film: "", year: 0, duration: 0, videoId: "" },
-      // { id: "c2", title: "Kajal Lagelu", artist: "Khesari Lal Yadav", film: "", year: 0, duration: 0, videoId: "" },
-      // { id: "c3", title: "Kajal Wali Akhiyaan", artist: "Arvind Akela Kallu", film: "", year: 0, duration: 0, videoId: "" },
-      // { id: "c4", title: "Kajal Laga Ke", artist: "Nilkamal Singh", film: "", year: 0, duration: 0, videoId: "" },
-      // { id: "c5", title: "Tor Kajal", artist: "Kumar Pritam", film: "", year: 0, duration: 0, videoId: "" },
-      // { id: "c6", title: "Kajal Re Kajal", artist: "Human Sagar", film: "", year: 0, duration: 0, videoId: "" },
-      // { id: "c7", title: "Kajal (Rab Se Hai Dua)", artist: "Arijit Singh", film: "", year: 0, duration: 0, videoId: "" },
-      // { id: "c8", title: "Naina Da Kajal", artist: "Guru Randhawa", film: "", year: 0, duration: 0, videoId: "" },
-      // { id: "c9", title: "Kajal (Haryanvi)", artist: "Masoom Sharma", film: "", year: 0, duration: 0, videoId: "" },
-      // { id: "c10", title: "Kajal Tera", artist: "Sukhe", film: "", year: 0, duration: 0, videoId: "" },
-      // { id: "c11", title: "Kajal Wale Naina", artist: "Tony Kakkar", film: "", year: 0, duration: 0, videoId: "" },
-      // { id: "c12", title: "Kajal (Lo-fi Mix)", artist: "Nikhil D'Souza", film: "", year: 0, duration: 0, videoId: "" },
-    ],
-  },
-];
+    // { id: "k4", title: "Kajal Kajal Teri Aankhon Ka", artist: "Amit Kumar", film: "", year: 0, duration: 0, videoId: "" },
+    // { id: "k5", title: "Mera Kajal", artist: "Falguni Pathak", film: "", year: 0, duration: 0, videoId: "" },
+    // { id: "k6", title: "Kajal", artist: "Munawar", film: "", year: 0, duration: 0, videoId: "" },
+    // { id: "k7", title: "Aankhon Mein Kajal Hai", artist: "Lata Mangeshkar", film: "", year: 0, duration: 0, videoId: "" },
+    // { id: "k8", title: "Aankhon Ka Kajal", artist: "Udit Narayan", film: "", year: 0, duration: 0, videoId: "" },
+    // { id: "k9", title: "Sun O Hasina Kajal Wali", artist: "Jolly Mukherjee", film: "", year: 0, duration: 0, videoId: "" },
+    // { id: "k10", title: "Mere Haath Mein", artist: "Sonu Nigam", film: "Fanaa", year: 2006, duration: 0, videoId: "" },
+    // { id: "k11", title: "Hum Tum", artist: "Alka Yagnik", film: "Hum Tum", year: 2004, duration: 0, videoId: "" },
+    // { id: "k12", title: "Choudhary (Naina Kajal Ke)", artist: "Ruchika Jangid", film: "", year: 0, duration: 0, videoId: "" },
+    // { id: "k13", title: "Kajal Wali (Title Track)", artist: "Neha Kakkar", film: "", year: 0, duration: 0, videoId: "" },
+    // { id: "k14", title: "Aankhon Mein Teri Kajal", artist: "A. K. Arya", film: "", year: 0, duration: 0, videoId: "" },
+    // { id: "k15", title: "Teri Aankhon Ka Kajal", artist: "Gulshan Kumar", film: "", year: 0, duration: 0, videoId: "" },
+    // { id: "k16", title: "Kajal Ki Siyahi Se", artist: "Pritam", film: "Brahmastra", year: 2022, duration: 0, videoId: "" },
+    // { id: "k17", title: "Nazar Na Lage (Kajal Lagake)", artist: "Shafqat Amanat Ali", film: "", year: 0, duration: 0, videoId: "" },
+    // { id: "k18", title: "Tu Hi Meri Kajal", artist: "Kumar Sanu", film: "", year: 0, duration: 0, videoId: "" },
+    // { id: "k19", title: "Kajal Re", artist: "Shailendra Singh", film: "Bobby", year: 1973, duration: 0, videoId: "" },
+    // { id: "k20", title: "Nakhon Mein Kajal", artist: "Hariharan", film: "", year: 0, duration: 0, videoId: "" },
+    // { id: "k21", title: "Kajal Na Dil Ma Rehjo", artist: "Kajal Maheriya", film: "", year: 0, duration: 0, videoId: "" },
+    // { id: "k22", title: "Mora Kajal", artist: "Kinjal Dave", film: "", year: 0, duration: 0, videoId: "" },
+    // { id: "k23", title: "Kajal Katariya (Title Track)", artist: "Kajal Katariya", film: "", year: 0, duration: 0, videoId: "" },
+    // { id: "k24", title: "Ankhiyaan Da Kajal", artist: "Rahat Fateh Ali Khan", film: "", year: 0, duration: 0, videoId: "" },
+    // { id: "k25", title: "Kajal Lagake (Reprise)", artist: "Neha Kakkar", film: "", year: 0, duration: 0, videoId: "" },
+    // { id: "k26", title: "Tor Naina Ma Kajal", artist: "Sunil Soni", film: "", year: 0, duration: 0, videoId: "" },
+    // { id: "k27", title: "Kajal Ankhiyaan", artist: "Pawan Singh", film: "", year: 0, duration: 0, videoId: "" },
+    // { id: "k28", title: "Kajal Lagelu", artist: "Khesari Lal Yadav", film: "", year: 0, duration: 0, videoId: "" },
+    // { id: "k29", title: "Kajal Wali Akhiyaan", artist: "Arvind Akela Kallu", film: "", year: 0, duration: 0, videoId: "" },
+    // { id: "k30", title: "Kajal Laga Ke", artist: "Nilkamal Singh", film: "", year: 0, duration: 0, videoId: "" },
+    // { id: "k31", title: "Tor Kajal", artist: "Kumar Pritam", film: "", year: 0, duration: 0, videoId: "" },
+    // { id: "k32", title: "Kajal Re Kajal", artist: "Human Sagar", film: "", year: 0, duration: 0, videoId: "" },
+    // { id: "k33", title: "Kajal (Rab Se Hai Dua)", artist: "Arijit Singh", film: "", year: 0, duration: 0, videoId: "" },
+    // { id: "k34", title: "Naina Da Kajal", artist: "Guru Randhawa", film: "", year: 0, duration: 0, videoId: "" },
+    // { id: "k35", title: "Kajal (Haryanvi)", artist: "Masoom Sharma", film: "", year: 0, duration: 0, videoId: "" },
+    // { id: "k36", title: "Kajal Tera", artist: "Sukhe", film: "", year: 0, duration: 0, videoId: "" },
+    // { id: "k37", title: "Kajal Wale Naina", artist: "Tony Kakkar", film: "", year: 0, duration: 0, videoId: "" },
+    //     { id: "k38", title: "Kajal (Lo-fi Mix)", artist: "Nikhil D'Souza", film: "", year: 0, duration: 0, videoId: "" },
+  ],
+  shamili: [
+    { id: "s1", title: "Ekla Cholo Re", artist: "Shamili", film: "", year: 0, duration: 0, videoId: "-d9QOzkxMKU" },
+  ],
+} satisfies Record<string, Track[]>;
+
+export type StationId = keyof typeof STATIONS;
