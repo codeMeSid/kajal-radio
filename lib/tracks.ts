@@ -30,7 +30,8 @@ export const PLAYLISTS: Playlist[] = [
     tracks: [
       { id: "a1", title: "Kesariya", artist: "Arijit Singh", film: "Brahmastra", year: 2022, duration: 0, videoId: "BddP6PYo2gs" },
       { id: "a2", title: "Kesariya Dance", artist: "Arijit Singh", film: "Brahmastra", year: 2022, duration: 0, videoId: "K3B8-klo5xc" },
-     
+      { id: "a2", title: "Kashish", artist: "Kashish", film: "Brahmastra", year: 2022, duration: 0, videoId: "nwXAkF8OFCc" },
+      
       // { id: "a1", title: "Kajal Kajal Teri Aankhon Ka", artist: "Amit Kumar", film: "", year: 0, duration: 0, videoId: "" },
       // { id: "a2", title: "Mera Kajal", artist: "Falguni Pathak", film: "", year: 0, duration: 0, videoId: "" },
       // { id: "a3", title: "Kajal", artist: "Munawar", film: "", year: 0, duration: 0, videoId: "" },
