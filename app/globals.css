@@ -1,0 +1,88 @@
+@import "tailwindcss";
+
+@theme {
+  /* Pulled off the scene: lamp-lit brass on Jaisalmer sandstone. */
+  --color-accent: #e3a94b;
+  --color-accent-soft: #f6d79a;
+  --color-accent-deep: #b87a26;
+  --color-sand: #d9c49a;
+  --color-ink: #f7f0e2;
+}
+
+@keyframes vinyl-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background-color: #16110b;
+  color: var(--color-ink);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* 1 — the scene. Two separately composed files, not a crop of each other. */
+.hero-bg {
+  background-image: url("/bg/scene-wide.png");
+}
+
+@media (orientation: portrait) {
+  .hero-bg {
+    background-image: url("/bg/scene-tall.png");
+  }
+}
+
+/* 2 — grain. feTurbulence as a data URI, multiplied over the scene. */
+.grain {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.82' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 240px 240px;
+  mix-blend-mode: overlay;
+  opacity: 0.3;
+}
+
+.vinyl-spin {
+  animation: vinyl-spin 8s linear infinite;
+}
+
+.blink {
+  animation: blink 1s step-end infinite;
+}
+
+/* The YouTube iframe replaces its host div, so target it from the wrapper. */
+.yt-frame iframe,
+.yt-frame > div {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* 16:9 source, object-fit:cover'd into a square. Never square-crop the file. */
+.yt-cover {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 100%;
+  width: calc(100% * 16 / 9);
+  transform: translate(-50%, -50%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .vinyl-spin,
+  .blink {
+    animation: none;
+  }
+}
