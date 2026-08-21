@@ -68,6 +68,7 @@ export const STATIONS = {
     { id: "s1", title: "Ekla Cholo Re", artist: "Shamili", film: "", year: 0, duration: 0, videoId: "-d9QOzkxMKU" },
     { id: "s2", title: "Halkat Jawani", artist: "Shamili", film: "", year: 0, duration: 0, videoId: "PzcSrkMKDdk" },
     { id: "s3", title: "Ik Kudi", artist: "Shamili", film: "", year: 0, duration: 0, videoId: "mfX7ynqrq2k" },
+    { id: "s4", title: "Bebo", artist: "Shamili", film: "", year: 0, duration: 0, videoId: "6VgBHZJggkA" },
   ],
 } satisfies Record<string, Track[]>;
 
