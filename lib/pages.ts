@@ -57,4 +57,12 @@ export const SITE_PAGES: SitePage[] = [
     kicker: "a private red room: floor-to-ceiling crimson walls, black lacquer, dark wood, low lamps, one four-poster · early-2010s luxury-erotica interior (not a street)",
     title: "सिड आफ्टर डार्क रेडियो",
   },
+  {
+    href: "/shreshth3",
+    src: "/bg/shreshth3/scene-wide.png",
+    alt: "Shreshth3 Radio",
+    kicker:
+      "a private penthouse lounge above a night city — dim 1970s bar, moon in the window, neon below, no street, no crowd · the 1970s — gangster nightlife colliding with a Sinatra lounge and Starboy aura",
+    title: "श्रेष्ठ3 रेडियो",
+  },
 ];

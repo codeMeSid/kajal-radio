@@ -102,6 +102,13 @@ export const STATIONS = {
     // Add songs here, one line each:
     // { id: "sad1", title: "", artist: "", film: "", year: 0, duration: 0, videoId: "" },
   ],
+  shreshth3: [
+    { id: "sh1", title: "Starboy", artist: "Shreshth", film: "", year: 0, duration: 0, videoId: "34Na4j8AVgA" },
+    { id: "sh2", title: "Gucci Ravi Kishan", artist: "Shreshth", film: "", year: 0, duration: 0, videoId: "F9_b9yTjdWY" },
+    { id: "sh3", title: "Kalyani", artist: "Shreshth", film: "", year: 0, duration: 0, videoId: "xvT1jH8B9AM" },
+    // Add songs here, one line each:
+    // { id: "sh31", title: "", artist: "", film: "", year: 0, duration: 0, videoId: "" },
+  ],
 } satisfies Record<string, Track[]>;
 
 export type StationId = keyof typeof STATIONS;
