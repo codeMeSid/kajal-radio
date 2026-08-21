@@ -72,7 +72,7 @@ COMPOSITION
 
 Use a wide 16:9 horizontal composition at approximately human eye level. Create a dense ordinary [SETTING] rather than a spectacular cityscape.
 
-The HTML page will overlay a compact horizontal music-player PILL (~80–90px tall) along the BOTTOM of the desktop screen. Keep the shop, figures, and main story in the middle of the frame. The bottom edge can be pavement / street — not the only place the story lives. Do NOT paint the player or any UI.
+The HTML page will overlay a compact horizontal music-player PILL (~80–90px tall) along the BOTTOM of the desktop screen. Inside that pill (do not paint it): disc on the left, a thin seeker along the top of the remaining space, prev/play/next centered below the seeker. Keep the shop, figures, and main story in the middle of the frame. The bottom edge can be pavement / street — not the only place the story lives. Do NOT paint the player or any UI.
 
 Place a small [FOCAL SHOP] toward the left-middle portion of the frame. The shop should primarily be represented as: dark rectangular opening + rough awning silhouette + counter shape + shelves + small [NOSTALGIC OBJECTS] shapes + anonymous human silhouettes. The shop interior should be extremely dark compared with the sunlit exterior. The darkness should be a major compositional shape. Do not illuminate every object inside; only selected objects emerge through small painted value accents. The shop should feel like a dark painted cavity inside a much warmer wall.
 

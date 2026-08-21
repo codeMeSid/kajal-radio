@@ -84,7 +84,7 @@ Generate with the image tool. Then **copy the files** into `public/bg/<slug>/` (
 
 **Tall** — read [prompt-tall.md](prompt-tall.md). `aspect_ratio: "9:16"`. Save as `public/bg/<slug>/scene-tall.png`.
 
-The live player is a compact ~80–90px pill at the bottom on both breakpoints. The tall prompt already tells the model to keep the story in the upper/middle 75% so the painting still reads under that pill. Do not paint the player into the image.
+The live player is a compact ~80–90px pill at the bottom on both breakpoints: disc on the left, a thin seeker along the top of the remaining space, prev/play/next centered below the seeker. The tall prompt already tells the model to keep the story in the upper/middle 75% so the painting still reads under that pill. Do not paint the player into the image.
 
 If the tool writes elsewhere, `mkdir -p public/bg/<slug>` and `cp` both files there. Confirm both exist before continuing.
 

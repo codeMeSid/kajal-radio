@@ -238,6 +238,57 @@ function SeekBar({
   );
 }
 
+function PillBody({
+  current,
+  compact,
+  position,
+  duration,
+  playing,
+  onSeek,
+  onPrev,
+  onNext,
+  onToggle,
+}: {
+  current: Track | undefined;
+  compact: boolean;
+  position: number;
+  duration: number;
+  playing: boolean;
+  onSeek: (seconds: number) => void;
+  onPrev: () => void;
+  onNext: () => void;
+  onToggle: () => void;
+}) {
+  return (
+    <div className="flex min-w-0 flex-1 flex-col justify-center">
+      <div className="flex items-center gap-2">
+        <SeekBar
+          position={position}
+          duration={duration}
+          onSeek={onSeek}
+          className="min-w-0 flex-1"
+        />
+        <div
+          className={`shrink-0 tabular-nums text-white/60 ${compact ? "text-[10px]" : "text-[10.5px]"}`}
+        >
+          {clock(position)} <span className="text-white/30">/</span> {clock(duration)}
+        </div>
+      </div>
+      <div className="grid grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] items-center">
+        <Meta track={current} compact={compact} />
+        <Transport
+          playing={playing}
+          onPrev={onPrev}
+          onNext={onNext}
+          onToggle={onToggle}
+          large={false}
+        />
+        <span aria-hidden />
+      </div>
+    </div>
+  );
+}
+
 function Transport({
   playing,
   onPrev,
@@ -582,55 +633,36 @@ export default function Radio({ station }: { station: StationId }) {
           </p>
         ) : null}
 
-        {/* DESKTOP — one horizontal pill. */}
+        {/* DESKTOP — disc left; seeker top; prev/play/next centered below. */}
         <div className={`hidden w-full items-center gap-4 rounded-full p-3 pr-5 sm:flex ${GLASS}`}>
           <VinylSlot slotRef={desktopSlot} size={80} hidden={expanded} />
-
-          <div className="min-w-0 flex-1">
-            <Meta track={current} compact={false} />
-            <SeekBar position={position} duration={shownDuration} onSeek={seek} className="mt-1" />
-          </div>
-
-          <div className="shrink-0 text-[10.5px] tabular-nums text-white/60">
-            {clock(position)} <span className="text-white/30">/</span> {clock(shownDuration)}
-          </div>
-
-          <Transport
+          <PillBody
+            current={current}
+            compact={false}
+            position={position}
+            duration={shownDuration}
             playing={playing}
+            onSeek={seek}
             onPrev={() => goTo(trackIndex - 1)}
             onNext={() => goTo(trackIndex + 1)}
             onToggle={toggle}
-            large={false}
           />
         </div>
 
-        {/* MOBILE — same pill height as desktop. Disc left; controls on top, seeker below. */}
+        {/* MOBILE — same stack as desktop, tighter vinyl. */}
         <div className={`flex w-full items-center gap-3 rounded-full p-2 pr-3 sm:hidden ${GLASS}`}>
           <VinylSlot slotRef={mobileSlot} size={64} hidden={expanded} />
-
-          <div className="min-w-0 flex-1">
-            <div className="flex items-center gap-1.5">
-              <Meta track={current} compact />
-              <Transport
-                playing={playing}
-                onPrev={() => goTo(trackIndex - 1)}
-                onNext={() => goTo(trackIndex + 1)}
-                onToggle={toggle}
-                large={false}
-              />
-            </div>
-            <div className="flex items-center gap-2">
-              <SeekBar
-                position={position}
-                duration={shownDuration}
-                onSeek={seek}
-                className="min-w-0 flex-1"
-              />
-              <div className="shrink-0 text-[10px] tabular-nums text-white/60">
-                {clock(position)} <span className="text-white/30">/</span> {clock(shownDuration)}
-              </div>
-            </div>
-          </div>
+          <PillBody
+            current={current}
+            compact
+            position={position}
+            duration={shownDuration}
+            playing={playing}
+            onSeek={seek}
+            onPrev={() => goTo(trackIndex - 1)}
+            onNext={() => goTo(trackIndex + 1)}
+            onToggle={toggle}
+          />
         </div>
       </div>
     </>
