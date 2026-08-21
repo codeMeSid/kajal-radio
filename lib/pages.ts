@@ -43,4 +43,11 @@ export const SITE_PAGES: SitePage[] = [
     kicker: "Big mansion backyard filled ultra luxury high performing cars arranged neatly in a row, with a guy standing in between with his arms open a smile on wearing white suit. with his wife next to him in Bangalore · 2020",
     title: "अभिषेक रेडियो",
   },
+  {
+    href: "/shalu",
+    src: "/bg/shalu/scene-wide.png",
+    alt: "Shalu Radio",
+    kicker: "Poo from Kabhi khushi kabhi Gham (Movie)'s room. Make Poo a lil curvy and chubby but hot with curly hair in a shimmery skirt and a halter neck top getting ready for a party with her girls while doing shots of vodka. · Early 2000s",
+    title: "शालू रेडियो",
+  },
 ];
