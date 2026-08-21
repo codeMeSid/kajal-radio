@@ -22,4 +22,11 @@ export const SITE_PAGES: SitePage[] = [
     kicker: "typical Bengali house setup · late 2020s",
     title: "शमीली रेडियो",
   },
+  {
+    href: "/shreshth",
+    src: "/bg/shreshth/scene-wide.png",
+    alt: "Shreshth Radio",
+    kicker: "an ordinary Gujarati urban neighbourhood · the late 1970s",
+    title: "श्रेष्ठ रेडियो",
+  },
 ];
