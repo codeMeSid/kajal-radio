@@ -29,4 +29,11 @@ export const SITE_PAGES: SitePage[] = [
     kicker: "an ordinary Gujarati urban neighbourhood · the late 1970s",
     title: "श्रेष्ठ रेडियो",
   },
+  {
+    href: "/shamili2",
+    src: "/bg/shamili2/scene-wide.png",
+    alt: "Shamili2 Radio",
+    kicker: "A girl lying on her bed in a Indian royal household set up with a bengali tradition theme with flowers or gajra in her hair · the late 1980s / 1990s",
+    title: "शमीली2 रेडियो",
+  },
 ];

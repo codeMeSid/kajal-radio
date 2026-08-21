@@ -77,6 +77,15 @@ export const STATIONS = {
     { id: "sh2", title: "Gucci Ravi Kishan", artist: "Shreshth", film: "", year: 0, duration: 0, videoId: "F9_b9yTjdWY" },
     { id: "sh3", title: "Kalyani", artist: "Shreshth", film: "", year: 0, duration: 0, videoId: "xvT1jH8B9AM" },
   ],
+  shamili2: [
+    { id: "s1", title: "Ekla Cholo Re", artist: "Shamili", film: "", year: 0, duration: 0, videoId: "-d9QOzkxMKU" },
+    { id: "s2", title: "Halkat Jawani", artist: "Shamili", film: "", year: 0, duration: 0, videoId: "PzcSrkMKDdk" },
+    { id: "s3", title: "Ik Kudi", artist: "Shamili", film: "", year: 0, duration: 0, videoId: "mfX7ynqrq2k" },
+    { id: "s4", title: "Bebo", artist: "Shamili", film: "", year: 0, duration: 0, videoId: "6VgBHZJggkA" },
+    { id: "s5", title: "Laavan", artist: "Shamili", film: "", year: 0, duration: 0, videoId: "WuvLbnFG8yg" },
+    { id: "s6", title: "Khwaab Dekhe", artist: "Shamili", film: "", year: 0, duration: 0, videoId: "kCQ6zaHDXj4" },
+    { id: "s7", title: "Radha", artist: "Shamili", film: "", year: 0, duration: 0, videoId: "52deq20h6Q4" },
+  ],
 } satisfies Record<string, Track[]>;
 
 export type StationId = keyof typeof STATIONS;
