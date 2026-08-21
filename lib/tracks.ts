@@ -97,6 +97,11 @@ export const STATIONS = {
     { id: "s2", title: "Tu hai wahi", artist: "Shamili", film: "", year: 0, duration: 0, videoId: "yBahBBAHs04" },
     { id: "s1", title: "It's raining men", artist: "Shamili", film: "", year: 0, duration: 0, videoId: "l5aZJBLAu1E" },
   ],
+  "sid-after-dark": [
+    { id: "sad1", title: "Still Yours", artist: "Sid", film: "", year: 0, duration: 0, videoId: "nK9EPzALN9k" },
+    // Add songs here, one line each:
+    // { id: "sad1", title: "", artist: "", film: "", year: 0, duration: 0, videoId: "" },
+  ],
 } satisfies Record<string, Track[]>;
 
 export type StationId = keyof typeof STATIONS;

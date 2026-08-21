@@ -50,4 +50,11 @@ export const SITE_PAGES: SitePage[] = [
     kicker: "Poo from Kabhi khushi kabhi Gham (Movie)'s room. Make Poo a lil curvy and chubby but hot with curly hair in a shimmery skirt and a halter neck top getting ready for a party with her girls while doing shots of vodka. · Early 2000s",
     title: "शालू रेडियो",
   },
+  {
+    href: "/sid-after-dark",
+    src: "/bg/sid-after-dark/scene-wide.png",
+    alt: "sid-after-dark Radio",
+    kicker: "a private red room: floor-to-ceiling crimson walls, black lacquer, dark wood, low lamps, one four-poster · early-2010s luxury-erotica interior (not a street)",
+    title: "सिड आफ्टर डार्क रेडियो",
+  },
 ];
