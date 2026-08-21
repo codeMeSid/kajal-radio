@@ -65,4 +65,11 @@ export const SITE_PAGES: SitePage[] = [
       "a private penthouse lounge above a night city — dim 1970s bar, moon in the window, neon below, no street, no crowd · the 1970s — gangster nightlife colliding with a Sinatra lounge and Starboy aura",
     title: "श्रेष्ठ3 रेडियो",
   },
+  {
+    href: "/sid",
+    src: "/bg/sid/scene-wide.png",
+    alt: "Sid Radio",
+    kicker: "a modern-day king's throne room · present day",
+    title: "सिड रेडियो",
+  },
 ];
