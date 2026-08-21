@@ -93,6 +93,7 @@ export const STATIONS = {
   shalu: [
     // Add songs here, one line each:
     // { id: "s1", title: "", artist: "", film: "", year: 0, duration: 0, videoId: "" },
+    { id: "s1", title: "It's raining men", artist: "Shamili", film: "", year: 0, duration: 0, videoId: "l5aZJBLAu1E" },
   ],
 } satisfies Record<string, Track[]>;
 
