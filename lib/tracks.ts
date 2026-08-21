@@ -87,6 +87,7 @@ export const STATIONS = {
     { id: "s7", title: "Radha", artist: "Shamili", film: "", year: 0, duration: 0, videoId: "52deq20h6Q4" },
   ],
   abhishek: [
+    { id: "a1", title: "Volume 1", artist: "Abhishek", film: "", year: 0, duration: 0, videoId: "SRNZSzjPioc" },
     // Add songs here, one line each:
     // { id: "a1", title: "", artist: "", film: "", year: 0, duration: 0, videoId: "" },
   ],
