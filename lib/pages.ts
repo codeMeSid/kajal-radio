@@ -36,4 +36,11 @@ export const SITE_PAGES: SitePage[] = [
     kicker: "A girl lying on her bed in a Indian royal household set up with a bengali tradition theme with flowers or gajra in her hair · the late 1980s / 1990s",
     title: "शमीली2 रेडियो",
   },
+  {
+    href: "/abhishek",
+    src: "/bg/abhishek/scene-wide.png",
+    alt: "Abhishek Radio",
+    kicker: "Big mansion backyard filled ultra luxury high performing cars arranged neatly in a row, with a guy standing in between with his arms open a smile on wearing white suit. with his wife next to him in Bangalore · 2020",
+    title: "अभिषेक रेडियो",
+  },
 ];

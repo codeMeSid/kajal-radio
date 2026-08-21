@@ -86,6 +86,10 @@ export const STATIONS = {
     { id: "s6", title: "Khwaab Dekhe", artist: "Shamili", film: "", year: 0, duration: 0, videoId: "kCQ6zaHDXj4" },
     { id: "s7", title: "Radha", artist: "Shamili", film: "", year: 0, duration: 0, videoId: "52deq20h6Q4" },
   ],
+  abhishek: [
+    // Add songs here, one line each:
+    // { id: "a1", title: "", artist: "", film: "", year: 0, duration: 0, videoId: "" },
+  ],
 } satisfies Record<string, Track[]>;
 
 export type StationId = keyof typeof STATIONS;
