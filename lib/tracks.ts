@@ -27,7 +27,6 @@ export const STATIONS = {
     { id: "k1", title: "Kesariya", artist: "Arijit Singh", film: "Brahmastra", year: 2022, duration: 0, videoId: "BddP6PYo2gs" },
     { id: "k2", title: "Kesariya Dance", artist: "Arijit Singh", film: "Brahmastra", year: 2022, duration: 0, videoId: "K3B8-klo5xc" },
     { id: "k3", title: "Kashish", artist: "Kashish", film: "Brahmastra", year: 2022, duration: 0, videoId: "nwXAkF8OFCc" },
-
     // { id: "k4", title: "Kajal Kajal Teri Aankhon Ka", artist: "Amit Kumar", film: "", year: 0, duration: 0, videoId: "" },
     // { id: "k5", title: "Mera Kajal", artist: "Falguni Pathak", film: "", year: 0, duration: 0, videoId: "" },
     // { id: "k6", title: "Kajal", artist: "Munawar", film: "", year: 0, duration: 0, videoId: "" },
@@ -69,6 +68,9 @@ export const STATIONS = {
     { id: "s2", title: "Halkat Jawani", artist: "Shamili", film: "", year: 0, duration: 0, videoId: "PzcSrkMKDdk" },
     { id: "s3", title: "Ik Kudi", artist: "Shamili", film: "", year: 0, duration: 0, videoId: "mfX7ynqrq2k" },
     { id: "s4", title: "Bebo", artist: "Shamili", film: "", year: 0, duration: 0, videoId: "6VgBHZJggkA" },
+    { id: "s5", title: "Laavan", artist: "Shamili", film: "", year: 0, duration: 0, videoId: "WuvLbnFG8yg" },
+    { id: "s6", title: "Khwaab Dekhe", artist: "Shamili", film: "", year: 0, duration: 0, videoId: "kCQ6zaHDXj4" },
+    { id: "s7", title: "Radha", artist: "Shamili", film: "", year: 0, duration: 0, videoId: "52deq20h6Q4" },
   ],
 } satisfies Record<string, Track[]>;
 
