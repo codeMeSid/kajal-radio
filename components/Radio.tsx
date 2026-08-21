@@ -140,14 +140,12 @@ function Meta({
   if (!track) {
     return (
       <div className="min-w-0 flex-1">
-        <p
-          className={`truncate font-semibold tracking-tight text-ink ${
-            compact ? "text-[15px]" : "text-[15px]"
-          }`}
-        >
+        <p className="truncate text-[15px] font-semibold tracking-tight text-ink">
           No tracks yet
         </p>
-        <p className="truncate text-[12.5px] text-white/70">add songs in lib/tracks.ts</p>
+        {compact ? null : (
+          <p className="truncate text-[12.5px] text-white/70">add songs in lib/tracks.ts</p>
+        )}
       </div>
     );
   }
@@ -156,14 +154,10 @@ function Meta({
     .join(" · ");
   return (
     <div className="min-w-0 flex-1">
-      <p
-        className={`truncate font-semibold tracking-tight text-ink ${
-          compact ? "text-[15px]" : "text-[15px]"
-        }`}
-      >
+      <p className="truncate text-[15px] font-semibold tracking-tight text-ink">
         {track.title}
       </p>
-      <p className="truncate text-[12.5px] text-white/70">{sub}</p>
+      {compact ? null : <p className="truncate text-[12.5px] text-white/70">{sub}</p>}
     </div>
   );
 }
@@ -260,7 +254,7 @@ function Transport({
   const ghost =
     "grid place-items-center rounded-full text-ink/80 transition hover:bg-white/10 hover:text-ink active:scale-95";
   return (
-    <div className={`flex items-center ${large ? "gap-3" : "gap-1"}`}>
+    <div className={`flex shrink-0 items-center ${large ? "gap-3" : "gap-0.5"}`}>
       <button
         type="button"
         onClick={onPrev}
@@ -449,10 +443,10 @@ export default function Radio({ station }: { station: StationId }) {
   }, [playing]);
 
   /* ---------------------------------------------------------------- *
-   * One iframe, two layouts. The desktop pill and the mobile card each
-   * hold an empty vinyl-sized slot; the real player is a single fixed
-   * element parked over whichever slot is currently visible. Moving the
-   * iframe in the DOM would reload it and stop playback.
+   * One iframe, two pills. Desktop and mobile each hold an empty vinyl
+   * slot; the real player is a single fixed element parked over whichever
+   * slot is currently visible. Moving the iframe in the DOM would reload
+   * it and stop playback.
    * ---------------------------------------------------------------- */
   const desktopSlot = useRef<HTMLDivElement>(null);
   const mobileSlot = useRef<HTMLDivElement>(null);
@@ -610,28 +604,31 @@ export default function Radio({ station }: { station: StationId }) {
           />
         </div>
 
-        {/* MOBILE — stacked card. */}
-        <div className={`w-full rounded-[26px] p-4 sm:hidden ${GLASS}`}>
-          <div className="flex items-center gap-3.5">
-            <VinylSlot slotRef={mobileSlot} size={64} hidden={expanded} />
-            <Meta track={current} compact />
-          </div>
+        {/* MOBILE — same pill height as desktop. Disc left; controls on top, seeker below. */}
+        <div className={`flex w-full items-center gap-3 rounded-full p-2 pr-3 sm:hidden ${GLASS}`}>
+          <VinylSlot slotRef={mobileSlot} size={64} hidden={expanded} />
 
-          <SeekBar position={position} duration={shownDuration} onSeek={seek} className="mt-3.5" />
-
-          <div className="mt-2 grid grid-cols-[1fr_auto_1fr] items-center">
-            <div className="text-[10.5px] tabular-nums text-white/60">
-              {clock(position)} <span className="text-white/30">/</span> {clock(shownDuration)}
+          <div className="min-w-0 flex-1">
+            <div className="flex items-center gap-1.5">
+              <Meta track={current} compact />
+              <Transport
+                playing={playing}
+                onPrev={() => goTo(trackIndex - 1)}
+                onNext={() => goTo(trackIndex + 1)}
+                onToggle={toggle}
+                large={false}
+              />
             </div>
-            <Transport
-              playing={playing}
-              onPrev={() => goTo(trackIndex - 1)}
-              onNext={() => goTo(trackIndex + 1)}
-              onToggle={toggle}
-              large
-            />
-            <div className="text-right text-[10.5px] tabular-nums text-white/40">
-              {tracks.length === 0 ? "0/0" : `${trackIndex + 1}/${tracks.length}`}
+            <div className="flex items-center gap-2">
+              <SeekBar
+                position={position}
+                duration={shownDuration}
+                onSeek={seek}
+                className="min-w-0 flex-1"
+              />
+              <div className="shrink-0 text-[10px] tabular-nums text-white/60">
+                {clock(position)} <span className="text-white/30">/</span> {clock(shownDuration)}
+              </div>
             </div>
           </div>
         </div>

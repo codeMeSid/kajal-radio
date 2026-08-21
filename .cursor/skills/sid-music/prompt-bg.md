@@ -2,6 +2,10 @@
 
 CREATE ONE SINGLE WIDE 16:9 PAINTED 2D BACKGROUND ARTWORK.
 
+THIS IS A BACKGROUND PAINTING ONLY. The HTML page will add its own UI later.
+
+Do NOT paint any website UI, HUD, overlay, caption, title, badge, icon, button, player control, or chrome of any kind. No all-caps setting/era banners. No Instagram / X / Twitter / mail / email icons. No listener-count pills. No "listening" text. No clock widgets. No wordmarks. No readable letters anywhere. Paint only the scene.
+
 The most important instruction is this:
 
 DO NOT THINK OF THIS AS A SCENE TO RENDER.
@@ -67,6 +71,8 @@ COMPOSITION
 --------------------------------------------------
 
 Use a wide 16:9 horizontal composition at approximately human eye level. Create a dense ordinary [SETTING] rather than a spectacular cityscape.
+
+The HTML page will overlay a compact horizontal music-player PILL (~80–90px tall) along the BOTTOM of the desktop screen. Keep the shop, figures, and main story in the middle of the frame. The bottom edge can be pavement / street — not the only place the story lives. Do NOT paint the player or any UI.
 
 Place a small [FOCAL SHOP] toward the left-middle portion of the frame. The shop should primarily be represented as: dark rectangular opening + rough awning silhouette + counter shape + shelves + small [NOSTALGIC OBJECTS] shapes + anonymous human silhouettes. The shop interior should be extremely dark compared with the sunlit exterior. The darkness should be a major compositional shape. Do not illuminate every object inside; only selected objects emerge through small painted value accents. The shop should feel like a dark painted cavity inside a much warmer wall.
 
@@ -161,7 +167,7 @@ The image should feel like a remembered place rather than a documented place: or
 ABSOLUTE NEGATIVE STYLE INSTRUCTIONS
 --------------------------------------------------
 
-NO photography. NO photorealism. NO 3D. NO CGI. NO Blender look. NO Unreal Engine look. NO PBR materials. NO realistic human skin. NO realistic faces. NO identifiable faces. NO portraits. NO celebrity likenesses. NO detailed eyes/noses/mouths. NO facial expressions. NO model-like people. NO AI beauty. NO black cartoon outlines. NO vector art. NO flat modern corporate illustration. NO photographic depth of field. NO bokeh. NO lens flare. NO bloom. NO HDR. NO glossy digital lighting. NO realistic reflections. NO procedural grunge. NO random digital noise. NO generic vintage filter. NO sepia filter. NO excessive film grain. NO readable text. NO logos. NO modern signage. NO realistic poster portraits. NO over-rendered objects. NO microdetail everywhere. NO perfect architectural geometry. NO hyperrealism.
+NO photography. NO photorealism. NO 3D. NO CGI. NO Blender look. NO Unreal Engine look. NO PBR materials. NO realistic human skin. NO realistic faces. NO identifiable faces. NO portraits. NO celebrity likenesses. NO detailed eyes/noses/mouths. NO facial expressions. NO model-like people. NO AI beauty. NO black cartoon outlines. NO vector art. NO flat modern corporate illustration. NO photographic depth of field. NO bokeh. NO lens flare. NO bloom. NO HDR. NO glossy digital lighting. NO realistic reflections. NO procedural grunge. NO random digital noise. NO generic vintage filter. NO sepia filter. NO excessive film grain. NO readable text. NO logos. NO modern signage. NO realistic poster portraits. NO over-rendered objects. NO microdetail everywhere. NO perfect architectural geometry. NO hyperrealism. NO website UI. NO HUD. NO overlay captions. NO all-caps title banners. NO social media icons. NO Instagram / X / mail icons. NO listener-count badges. NO "listening" pills. NO clock widgets. NO player controls. NO buttons. NO chrome. The image is a painted scene, not a website mockup.
 
 --------------------------------------------------
 FINAL ARTISTIC PRINCIPLE

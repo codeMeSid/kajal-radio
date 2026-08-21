@@ -15,7 +15,7 @@ Add **one person** to the existing gallery. Do **not** scaffold a new site. Do *
 
 ## Hard rules
 
-- Interview. Do not assume any board value. Do not invent taglines, tracks, or social URLs. Wordmark is always Devanagari `[Name]` + ` रेडियो` (see step 5).
+- Interview. Do not assume any board value. Do not invent taglines, tracks, or social URLs. Do not add social icons, a listener-count pill, or a small-caps setting/era caption. Wordmark is always Devanagari `[Name]` + ` रेडियो` (see step 5).
 - Music: create the `STATIONS` key only. Leave the array empty. The user pastes tracks later. Do not search, suggest, or add songs. If they later ask to add a track you believe is copyrighted, warn before adding.
 - Images: generate both, write them to disk under `public/bg/<slug>/`. Never reuse another person's files. Never crop wide → tall.
 - Touch only: the two images under `public/bg/<slug>/`, `app/globals.css` (one scoped hero class), `app/<slug>/page.tsx`, `lib/pages.ts`, `lib/tracks.ts`.
@@ -53,7 +53,7 @@ Otherwise print the board and **stop**. Do not generate images. Do not write fil
 [ADDITIONAL NOTES]  = extra image constraints, e.g. more trees, no cricket, shop is a tea stall. Blank is fine.
 ```
 
-Ask nothing else. No tagline, socials, accent, or playlists. Wordmark is derived in step 5.
+Ask nothing else. No tagline, socials, accent, playlists, listener count, or setting/era caption. Wordmark is derived in step 5.
 
 ### 2. Slug
 
@@ -84,6 +84,8 @@ Generate with the image tool. Then **copy the files** into `public/bg/<slug>/` (
 
 **Tall** — read [prompt-tall.md](prompt-tall.md). `aspect_ratio: "9:16"`. Save as `public/bg/<slug>/scene-tall.png`.
 
+The live player is a compact ~80–90px pill at the bottom on both breakpoints. The tall prompt already tells the model to keep the story in the upper/middle 75% so the painting still reads under that pill. Do not paint the player into the image.
+
 If the tool writes elsewhere, `mkdir -p public/bg/<slug>` and `cp` both files there. Confirm both exist before continuing.
 
 ### 4. CSS
@@ -113,11 +115,10 @@ Wordmark: transliterate `[Name]` to Devanagari, then append ` रेडियो
 | `metadata.title` | `[Name] Radio` |
 | `metadata.description` | `[SETTING], [ERA]` |
 | hero class | `hero-bg-<slug>` (not `hero-bg`) |
-| small caps line | `[SETTING] · [ERA]` |
 | `h1` | Devanagari `[Name]` + ` रेडियो` (still `Link` to `/`) |
 | `<Radio station>` | `"<slug>"` |
 
-Delete the poetry/tagline `<p>` under the h1. Do not invent a replacement. Leave `SOCIALS` hrefs as `#`. Clone existing page + `Radio`. Do not rewrite the player. Do not add tracks.
+Header is wordmark only. Delete the small-caps setting/era `<p>` above the h1. Delete the poetry/tagline `<p>` under the h1. Do not invent replacements. Do **not** clone `SOCIALS`, `Listeners`, Instagram / X / mail icons, or a listener-count pill. Clock stays. Clone existing page + `Radio`. Do not rewrite the player. Do not add tracks.
 
 ### 6. Gallery
 

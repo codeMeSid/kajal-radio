@@ -2,6 +2,10 @@
 
 CREATE ONE SINGLE TALL 9:16 PAINTED 2D BACKGROUND ARTWORK
 
+THIS IS A BACKGROUND PAINTING ONLY. The HTML page will add its own UI later.
+
+Do NOT paint any website UI, HUD, overlay, caption, title, badge, icon, button, player control, or chrome of any kind. No all-caps setting/era banners. No Instagram / X / Twitter / mail / email icons. No listener-count pills. No "listening" text. No clock widgets. No wordmarks. No readable letters anywhere. Paint only the scene.
+
 The most important instruction is this:
 
 DO NOT THINK OF THIS AS A SCENE TO RENDER.
@@ -66,11 +70,13 @@ Do NOT outline people or objects with black ink. There should be no thick cartoo
 COMPOSITION
 --------------------------------------------------
 
-Use a wide 16:9 horizontal composition at approximately human eye level. Create a dense ordinary [SETTING] rather than a spectacular cityscape.
+Use a TALL 9:16 VERTICAL composition at approximately human eye level. This is a phone-screen painting, not a cropped wide painting and not a squeezed 16:9. Compose as a vertical slice of the same world: sky and rooftops in the upper third, the shop and street life in the middle, pavement / ground in the lower third. Create a dense ordinary [SETTING] rather than a spectacular cityscape.
 
-Place a small [FOCAL SHOP] toward the left-middle portion of the frame. The shop should primarily be represented as: dark rectangular opening + rough awning silhouette + counter shape + shelves + small [NOSTALGIC OBJECTS] shapes + anonymous human silhouettes. The shop interior should be extremely dark compared with the sunlit exterior. The darkness should be a major compositional shape. Do not illuminate every object inside; only selected objects emerge through small painted value accents. The shop should feel like a dark painted cavity inside a much warmer wall.
+The HTML page will overlay a compact horizontal music-player PILL (~80–90px tall, full width) across the BOTTOM of the phone. Keep the important figures, the shop, the main story, and [STREET LIFE] in the UPPER and MIDDLE ~75% of the frame. The bottom ~12–15% must be quieter painted ground / pavement / shadow / empty street — readable even when that band is covered. Do NOT paint the player. Do NOT paint any UI, disc, buttons, or seeker. Do NOT leave a blank white bar. Just compose the scene so the story sits above that band.
 
-Outside the shop, create an ordinary street with the everyday elements of [SETTING] and [ERA]: bicycles, crates, boxes, a scooter, anonymous pedestrians, an anonymous shopkeeper and customers, children playing, old buildings, stairs, trees, clotheslines, electrical poles, wires, rooftops, water tanks, satellite dishes, and your [NOSTALGIC OBJECTS]. Every one of these must remain a graphic painted representation rather than a realistic object render.
+Place a small [FOCAL SHOP] toward the upper-middle of the frame (not at the bottom). The shop should primarily be represented as: dark rectangular opening + rough awning silhouette + counter shape + shelves + small [NOSTALGIC OBJECTS] shapes + anonymous human silhouettes. The shop interior should be extremely dark compared with the sunlit exterior. The darkness should be a major compositional shape. Do not illuminate every object inside; only selected objects emerge through small painted value accents. The shop should feel like a dark painted cavity inside a much warmer wall.
+
+Outside the shop, create an ordinary street with the everyday elements of [SETTING] and [ERA]: bicycles, crates, boxes, a scooter, anonymous pedestrians, an anonymous shopkeeper and customers, children playing, old buildings, stairs, trees, clotheslines, electrical poles, wires, rooftops, water tanks, satellite dishes, and your [NOSTALGIC OBJECTS]. Stack these vertically. Every one of these must remain a graphic painted representation rather than a realistic object render.
 
 --------------------------------------------------
 ARCHITECTURE
@@ -161,7 +167,7 @@ The image should feel like a remembered place rather than a documented place: or
 ABSOLUTE NEGATIVE STYLE INSTRUCTIONS
 --------------------------------------------------
 
-NO photography. NO photorealism. NO 3D. NO CGI. NO Blender look. NO Unreal Engine look. NO PBR materials. NO realistic human skin. NO realistic faces. NO identifiable faces. NO portraits. NO celebrity likenesses. NO detailed eyes/noses/mouths. NO facial expressions. NO model-like people. NO AI beauty. NO black cartoon outlines. NO vector art. NO flat modern corporate illustration. NO photographic depth of field. NO bokeh. NO lens flare. NO bloom. NO HDR. NO glossy digital lighting. NO realistic reflections. NO procedural grunge. NO random digital noise. NO generic vintage filter. NO sepia filter. NO excessive film grain. NO readable text. NO logos. NO modern signage. NO realistic poster portraits. NO over-rendered objects. NO microdetail everywhere. NO perfect architectural geometry. NO hyperrealism.
+NO photography. NO photorealism. NO 3D. NO CGI. NO Blender look. NO Unreal Engine look. NO PBR materials. NO realistic human skin. NO realistic faces. NO identifiable faces. NO portraits. NO celebrity likenesses. NO detailed eyes/noses/mouths. NO facial expressions. NO model-like people. NO AI beauty. NO black cartoon outlines. NO vector art. NO flat modern corporate illustration. NO photographic depth of field. NO bokeh. NO lens flare. NO bloom. NO HDR. NO glossy digital lighting. NO realistic reflections. NO procedural grunge. NO random digital noise. NO generic vintage filter. NO sepia filter. NO excessive film grain. NO readable text. NO logos. NO modern signage. NO realistic poster portraits. NO over-rendered objects. NO microdetail everywhere. NO perfect architectural geometry. NO hyperrealism. NO website UI. NO HUD. NO overlay captions. NO all-caps title banners. NO social media icons. NO Instagram / X / mail icons. NO listener-count badges. NO "listening" pills. NO clock widgets. NO player controls. NO buttons. NO chrome. The image is a painted scene, not a website mockup.
 
 --------------------------------------------------
 FINAL ARTISTIC PRINCIPLE

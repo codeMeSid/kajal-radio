@@ -46,30 +46,3 @@ export function Clock() {
     </div>
   );
 }
-
-export function Listeners() {
-  const [count, setCount] = useState<number | null>(null);
-
-  useEffect(() => {
-    // ponytail: cosmetic. Swap for a real presence channel when one exists.
-    let n = 180 + Math.floor(Math.random() * 90);
-    setCount(n);
-    const id = setInterval(() => {
-      n = Math.max(120, n + Math.floor(Math.random() * 9) - 4);
-      setCount(n);
-    }, 5000);
-    return () => clearInterval(id);
-  }, []);
-
-  return (
-    <div className="flex items-center gap-1.5 rounded-full border border-white/10 bg-black/25 px-2.5 py-1.5 backdrop-blur-md sm:gap-2 sm:px-3">
-      <span className="relative flex size-1.5">
-        <span className="absolute inline-flex size-full animate-ping rounded-full bg-accent/70" />
-        <span className="relative inline-flex size-1.5 rounded-full bg-accent" />
-      </span>
-      <span className="text-[9.5px] uppercase tracking-[0.12em] text-ink/70 tabular-nums sm:text-[10.5px] sm:tracking-[0.16em]">
-        {count === null ? "on air" : `${count} listening`}
-      </span>
-    </div>
-  );
-}
