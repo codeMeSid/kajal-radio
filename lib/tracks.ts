@@ -113,6 +113,11 @@ export const STATIONS = {
     // Add songs here, one line each:
     // { id: "s1", title: "", artist: "", film: "", year: 0, duration: 0, videoId: "" },
   ],
+  "sharath-jharna": [
+    { id: "sj1", title: "until I found you", artist: "Sharath", film: "", year: 0, duration: 0, videoId: "GxldQ9eX2wo" },
+    // Add songs here, one line each:
+    // { id: "sj1", title: "", artist: "", film: "", year: 0, duration: 0, videoId: "" },
+  ],
 } satisfies Record<string, Track[]>;
 
 export type StationId = keyof typeof STATIONS;

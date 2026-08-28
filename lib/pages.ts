@@ -72,4 +72,11 @@ export const SITE_PAGES: SitePage[] = [
     kicker: "a modern-day king's throne room · present day",
     title: "सिड रेडियो",
   },
+  {
+    href: "/sharath-jharna",
+    src: "/bg/sharath-jharna/scene-wide.png",
+    alt: "Sharath Jharna Radio",
+    kicker: "a secluded Hawaiian beach at sunset · present day",
+    title: "शरथ झअरना रेडियो",
+  },
 ];
