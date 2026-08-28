@@ -31,7 +31,7 @@ export default function SharathJharnaRadio() {
       <header className="mt-[max(4.5rem,calc(env(safe-area-inset-top)+3.5rem))] px-6 text-center">
         <h1 className="text-4xl font-semibold tracking-[-0.03em] text-ink drop-shadow-[0_4px_20px_rgba(0,0,0,0.85)] sm:text-5xl">
           <Link href="/" className="transition hover:text-accent-soft">
-            शरथ झअरना रेडियो
+            Sharath Jharna Radio
           </Link>
         </h1>
       </header>
