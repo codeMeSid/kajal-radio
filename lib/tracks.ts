@@ -118,6 +118,10 @@ export const STATIONS = {
     // Add songs here, one line each:
     // { id: "sj1", title: "", artist: "", film: "", year: 0, duration: 0, videoId: "" },
   ],
+  zomb: [
+    // Add songs here, one line each:
+    // { id: "z1", title: "", artist: "", film: "", year: 0, duration: 0, videoId: "" },
+  ],
 } satisfies Record<string, Track[]>;
 
 export type StationId = keyof typeof STATIONS;

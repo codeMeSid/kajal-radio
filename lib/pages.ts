@@ -79,4 +79,11 @@ export const SITE_PAGES: SitePage[] = [
     kicker: "a secluded Hawaiian beach at sunset · present day",
     title: "शरथ झअरना रेडियो",
   },
+  {
+    href: "/zomb",
+    src: "/bg/zomb/scene-wide.png",
+    alt: "Zomb Radio",
+    kicker: "New York City in shambles — the Avengers assembled before a major fight · present day",
+    title: "ज़ोम्ब रेडियो",
+  },
 ];
